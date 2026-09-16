@@ -1,0 +1,21 @@
+[project]
+name = "two-wheel-data"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "kagglehub[pandas-datasets]>=1.0.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/two_wheel_data"]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
